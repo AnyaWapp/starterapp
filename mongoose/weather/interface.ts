@@ -1,10 +1,10 @@
-// import { StringValueNode } from "graphql";
+import { StringValueNode } from "graphql";
 
-// export declare interface WeatherInterface
-// {
-//     zip: string;
-//     weather: string;
-//     tempC: string;
-//     tempF: string;
-//     friends: string[];
-// };
+export declare interface WeatherInterface
+{
+    zip: string;
+    weather: string;
+    tempC: string;
+    tempF: string;
+    friends: string[];
+};

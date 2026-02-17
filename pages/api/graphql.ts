@@ -3,7 +3,7 @@ import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { resolvers } from "../../graphql/resolver";
 import { typeDefs } from "../../graphql/schema";
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
-
+import dbConnect from "../../middleware/db-connect";
 
 const server = new ApolloServer({
     resolvers,
@@ -14,6 +14,7 @@ const handler = startServerAndCreateNextHandler(server, {
   context: async (req, res) => ({ req, res }),
 });
 
+await dbConnect();
 
 //grabs requests and sends them to Apollo server
 
@@ -34,5 +35,9 @@ const allowCors = (fn: NextApiHandler) =>
     };
 
     //Allows the browser to talk to the server
+
+//     CORS headers allow: 
+// • Access from other domains 
+// • Use of the Apollo Sandbox in the browser
 
 export default allowCors(handler);
