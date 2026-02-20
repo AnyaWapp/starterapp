@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WombatComponent default Wombat 1`] = `
+<div>
+  <h2>
+    Wombats or no?: 
+    Wombats
+  </h2>
+  <button
+    onClick={[Function]}
+  >
+    Switch to 
+    Wombats
+  </button>
+</div>
+`;
+
+exports[`WombatComponent no wombat when clicked :( 1`] = `
+<div>
+  <h2>
+    Wombats or no?: 
+    noWombats
+  </h2>
+  <button
+    onClick={[Function]}
+  >
+    Switch to 
+    noWombats
+  </button>
+</div>
+`;
